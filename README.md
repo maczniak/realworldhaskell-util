@@ -3,7 +3,7 @@
 utilties for the unofficial "Real World Haskell" site
 
 * book content and comments crawler
-* html-to-markdown converter
+* html-to-markdown converter (more customized than pandoc)
 
 ## See Also
 
@@ -13,6 +13,11 @@ utilties for the unofficial "Real World Haskell" site
 ## TODO
 
 * crawler
+ * crawler
+ * relativize URLs
+ * handle bookstore links
+ * parallel fetch
+ * use either ByteString or Text
 * converter
  * generate with-comment and without-comment versions
  * handle "Tip"
