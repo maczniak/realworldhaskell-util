@@ -19,13 +19,13 @@ library
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 
-executable convert
+executable tomarkdown
   hs-source-dirs:      app
-  main-is:             Main.hs
+  main-is:             ToMarkdown.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
+                     , MissingH
                      , tagsoup
-                     , text
   default-language:    Haskell2010
 
 executable crawl
@@ -33,6 +33,21 @@ executable crawl
   main-is:             Crawl.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
+                     , bytestring
+                     , directory
+                     , http-client
+                     , lens
+                     , regex-compat
+                     , utf8-string
+                     , wreq
+  default-language:    Haskell2010
+
+executable gfm
+  hs-source-dirs:      app
+  main-is:             GitHubMarkdownRenderer.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       aeson
+                     , base
                      , bytestring
                      , directory
                      , http-client
